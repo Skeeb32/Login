@@ -1,6 +1,6 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
 
-#131086: #131086;
+$primary-color: #131086;
 $secondary-color: #b621f3;
 
 * {
@@ -11,7 +11,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(45deg, #131086, #b621f3);
+  background: linear-gradient(45deg, $primary-color, $secondary-color);
   padding: 40px;
 }
 
@@ -56,19 +56,18 @@ body {
 
 .login-form {
   width: 450px;
-}
 
-.login-form-content {
+  &-content {
     display: flex;
     flex-direction: column;
   }
 
-  .login-form-footer {
+  &-footer {
     display: flex;
     gap: 30px;
     margin-top: 70px;
-  }
-  a:link {
+
+    a {
       flex: 6;
       gap: 15px;
       border: 1px solid black;
@@ -79,8 +78,8 @@ body {
       align-items: center;
       color: black;
       text-decoration: none;
-  }
-      a:hover {
+
+      &:hover {
         background-color: #eee;
       }
     }
@@ -101,10 +100,10 @@ input[type='text'],
 input[type='password'] {
   border: 1px solid black;
   height: 55px;
-  padding: 0 2px;
+  padding: 0 2;
   width: 100%;
   outline: none;
-  transition: background-color 0.5s ease;
+  transition: background 5s;
   font-size: 18px;
   border-radius: 100px;
 }
@@ -118,12 +117,12 @@ input[type='password'] {
 input[type='checkbox'] {
   width: 20px;
   height: 20px;
-  accent-color: #131086;
+  accent-color: $primary-color;
 }
 
 button {
   border: none;
-  background: linear-gradient(45deg, #131086, #b621f3);
+  background: linear-gradient(45deg, $primary-color, $secondary-color);
   color: white;
   padding: 1rem;
   border-radius: 100px;
@@ -143,7 +142,7 @@ button {
   .login-form {
     width: 100%;
 
-    .login-form-footer {
+    &-footer {
       flex-direction: column;
       gap: 15px;
     }
@@ -162,6 +161,4 @@ button {
   .login-right {
     display: none;
   }
-
-
 }
